@@ -1,44 +1,99 @@
+DEF. \label{def:zbieznoscjednostajna} (Zbieżność jednostajna)
+Powiemy, że ciąg funkcji $\{f_n\}$ jest zbieżny jednostajnie na zbiorze $E$ do funkcji $f$, jeżeli dla dowolnego $\varepsilon >0 $ istnieje liczba naturalna $N$ taka, że dla $n \leq N$ zachodzi 
+        \begin{equation*}i
+		 \left| f_n(x) - f(x) \right| \leq \varepsilon
+	\end{equation*} 
+przy dowolnym $x \in E$.
+
+Powiemy, że szereg $\sum f_n(x)$jest na zbiorze E zbieżny jednostajnie, jeżeli ciąg $\{s_n\}$ sum częściowych określonych równością 
+ 	\begin{equation*}
+		 s_n(x) = \sum^{n}_{i=1} f_i(x)
+	\end{equation*}
+jest zbieżny jednostajnie na zbiorze E.
+
+Jaka jest różnica między zbieżnością punktową a jednostajną?
+Zapiszmy definicje używając kwantyfikatorów
+
+Zbieżnośc punktowa $f_n \to f$ na $E$:$ \forall x \in E \forall \varepsilon>0 \exists N = N(x, \varepsilon)>0 \forall n>0 (\left|f_n(x)-f(x)\right|<\varepsilon).$
+Zbieżnośc jednostajna $f_n \to \rightrightarrows f$ na $E$ $\forall \varepsilon>0 \exists N = N(\varepsilon)>0 \forall x \in E \forall n>0 (\left|f_n(x)-f(x)\right|<\varepsilon$
+
+Ciąg zbieżny jednostajnie jest także zbieżny punktowo. Różnica polega na tym, ze przy zbieżności punktowej liczbę $N$ wybieramy mając już ustalone $x$ i $\varepsilon$, zatem $N$ jest zależne od $x$ i $\varepsilon$.
+Jeżeli ciąg jest zbieżny jednostajnie, to przy każdym $\varepsilon>0$ można dobrać jedną wspólną dla wszystkich punktów $x \in E$ liczbę $N$.
+
+Wróćmy do przykładu ref{ex1:zbieznoscpunktowa}  i pokażmy, że ciąg $\{f_n\}$ nie jest zbieżny jednostajnie. Przypomnijmy, że
+        \begin{equation*}
+		X=[0,1]\), \(x \in X\),
+       		 f_n(x)=x^n \\
+       		 f(x) = 
+       		 \begin{cases} 
+       			 0, \quad x \in [0,1) \\
+       			 1, \quad x = 1
+	\end{equation*}}
+Zauważmy, że dla $x = 2^{-frac{1}{n}}$ mamy:
+	\begin{equation*}
+		f_n(x)- f(x) = f_n( 2^{-frac{1}{n}}) - f( 2^{-frac{1}{n}}) = \frac{1}{2}
+	\end{equation*}
+Zatem warunek jednostajnej zbieżności nie zachodzi dla $\varepsilon < \frac{1}{2}$.
+
 Kilka istotnych faktów związanych ze zbieżnością jednostajną.
 
 Kiedy ciąg jest jednostajnie zbieżny?
 \label{par:kiedyCiagJestJednZb}
-Z definicji /ref{def:jednostajnazbieznosc} wynika, że ciąg \(\{f_n\}\) jest jednostajnie zbieżny do \(f\) wtedy i tylko wtedy, gdy ciąg liczbowy
-	\[M_n = \sup_{x \in E} \left| f_n(x) - f(x) \right|\] jest zbieżny do zera.
+Z definicji /ref{def:jednostajnazbieznosc} wynika, że ciąg $\{f_n\}$ jest jednostajnie zbieżny do $f$ wtedy i tylko wtedy, gdy ciąg liczbowy
+	\begin{equation*}
+		M_n = \sup_{x \in E} \left| f_n(x) - f(x) \right|
+	\end{equation*}
+ jest zbieżny do zera.
 Mówi się wtedy o supremum normie, która  czasem oznaczana jest przez 
-	\[\|f\|_{\infty} = \sup_{x \in E} \left| g(x) \right|\]
-Można w ten sposób określić odległość między funkcjami ciągłymi \(f i g\) jako 
-	\[\|f-g\|_{\infty} = \sup_{x \in E} \left|f(x) -  g(x) \right|\]
+	\bein{equation*}
+		\|f\|_{\infty} = \sup_{x \in E} \left| g(x) \right|
+	\end{equation*}
+Można w ten sposób określić odległość między funkcjami ciągłymi $f i g$ jako 
+	\begin{equation*}
+		\|f-g\|_{\infty} = \sup_{x \in E} \left|f(x) -  g(x) \right|
+	\end{equation*}
 
 (Należałoby sprawdzić, że tak określona odległość spęłnia warunki metryki)
 
 TWIERDZENIE \label{tw:zbjednCiagCouchyego}
-Ciąg funkcji \(\{f_n\}\) określonych na zbiorze\( E\), jest na tym zbiorze zbieżny jednostajnie wtedy i tylko wtedy, gdy dla dowolnych \(\varepsilon>  0\) istnieje liczba naturalna \(N\) taka, że przy \(n /meq N, m \meq N\) mamy
-	\[f_n(x) - f_m(x) \leq \varepsilon.\]
+Ciąg funkcji $\{f_n\}$ określonych na zbiorze$ E$, jest na tym zbiorze zbieżny jednostajnie wtedy i tylko wtedy, gdy dla dowolnych $\varepsilon>  0$ istnieje liczba naturalna $N$ taka, że przy $n /meq N, m \meq N$ mamy
+	\begin{equation*}
+		f_n(x) - f_m(x) \leq \varepsilon.
+	\end{equation*}
 DOWÓD.
 (z lewej na prawą)
-Niech ciąg \{f_n}\) będzie zbieżny jednostajnie na zbiorze \(E\) do funkcji \(f\). Istnieje wtedy taka liczba \(N \in \mathbb{N}, że jeśli \(n \geqslant N\) i \(x \in E\), to zachodzi nierówność
-	\[\left| f_n(x) - f_m(x)\right| \leq \[\left| f_n(x) - f(x)\right| + \left|f(x) - f_m(x)\right| \leq  \frac{1}{2} \varepsilon] +  \frac{1}{2} \varepsilon =
-	 \varepsilon\]
-dla \(n, m \geq N,\. x \in E.\)
+Niech ciąg ${f_n}$ będzie zbieżny jednostajnie na zbiorze $E$ do funkcji $f$. Istnieje wtedy taka liczba $N \in \mathbb{N}$, że jeśli $n \geqslant N$ i $x \in E\), to zachodzi nierówność
+	\begin{equation*}
+		\left| f_n(x) - f_m(x)\right| \leq \[\left| f_n(x) - f(x)\right| + \left|f(x) - f_m(x)\right| \leq  \frac{1}{2} \varepsilon] +  \frac{1}{2} \varepsilon =
+		 \varepsilon
+	\end{equation*}
+dla $n, m \geq N,\. x \in E.$
 
 (z prawej na lewą)
-Niech będzie spęłniony warunek Couchy'ego. (Co z zupęlnością?). Wtedy ciąg \(\{f_n(x)\}\) dla każdego \(x \in E\) jest zbieżny. Oznaczmy jego granicę przez \( f(x)\). 
-Niech będzie dana liczba \varepsilon >0\) i \(N\) takie, żeby spęlniona była nierówność
-	\[f_n(x) - f_m(x) \leq \varepsilon.\] 
-Ustalmy \(n\) i przejdźmy do granicy z \(m\). \(f_m(x) \to f(x)\) przy \(m \to \infty\) zatem
-	\[\left|f_n(x)-f(x)\right| \leq \varepsilon\]
-dla dowolnego \(n\geq N\) i dowolnego \(x \in E\).
-Zatem ciąg \(f_n(x)\) jest zbieżny jednostajnie do \(f(x)\).
+Niech będzie spęłniony warunek Couchy'ego. (Co z zupęlnością?). Wtedy ciąg $\{f_n(x)\}$ dla każdego $x \in E$ jest zbieżny. Oznaczmy jego granicę przez $ f(x)$. 
+Niech będzie dana liczba $\varepsilon >0$ i $N$ takie, żeby spelniona była nierówność
+	\begin{equation*}
+		f_n(x) - f_m(x) \leq \varepsilon.
+	\end{equation*} 
+Ustalmy $n$ i przejdźmy do granicy z $m$. $f_m(x) \to f(x)$ przy $m \to \infty$ zatem
+	\begin{equation*}
+		\left|f_n(x)-f(x)\right| \leq \varepsilon
+	\end{equation*}
+dla dowolnego $n\geq N$ i dowolnego $x \in E$.
+Zatem ciąg $f_n(x)$ jest zbieżny jednostajnie do $f(x)$.
 
 
 TWIERDZENIE \label{tw:KrytWeistrassa}
-Niech \(\{f_n\}\) będzie ciągiem funkcji określonych na zbiorze \(E\) i niech 
-	\[\left|f_n \right|\leq M_n \quad (x \in E, \. n = 1,2,3, \ldots\]
-Wtedy szereg \(\sum f_n \) jest zbieżny jednostajnie na E, jeżeli jest zbieżny szereg liczbowy \(\sum M_n\).
+Niech $\{f_n\}$ będzie ciągiem funkcji określonych na zbiorze $E$ i niech 
+	\begin{equation*}
+		\left|f_n \right|\leq M_n \quad (x \in E, \. n = 1,2,3, \ldots
+	\end{equation*}
+Wtedy szereg $\sum f_n $ jest zbieżny jednostajnie na E, jeżeli jest zbieżny szereg liczbowy $\sum M_n$.
 
 DOWÓD.
-Jeżeli szereg \(sum M_n\) jest zbieżny, to przy dowolnym \(\varepsilon \ge > 0\)
-	\[\left|\sum_{i=0}^m f_i(x) - \sum_{i=0}^n f_i \right| = \left|\sum_{i=n}^m f_i(x) \leq \sum_{i=n}^m M_i \leq \varepsilon \quad (x \in E\),\]
-jeśli tylko \(m\) i \(n\) są wystarczająco duże. Zbieżność jednostajna wynika z twierdzenia \ref{tw:zbjednCiagCouchyego}
-
+Jeżeli szereg $sum M_n$ jest zbieżny, to przy dowolnym $\varepsilon \ge > 0$
+	\begin{equation*}
+		\left|\sum_{i=0}^m f_i(x) - \sum_{i=0}^n f_i \right| = \left|\sum_{i=n}^m f_i(x) \leq \sum_{i=n}^m M_i \leq \varepsilon \quad (x \in E),
+	\end{equation*}
+jeśli tylko $m$ i $n$ są wystarczająco duże. Zbieżność jednostajna wynika z twierdzenia \ref{tw:zbjednCiagCouchyego}
 

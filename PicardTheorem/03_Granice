@@ -3,41 +3,64 @@ Czy w przypadku zbieżności jednostajnej granica ciągu funkcji ciągłych jest
 Aby się przekonać rozważmy następujące twierdzenie:
 
 TWIERDZENIE \ref{tw:granicaJednostZbCiaguCiagla}
-Niech \(f_n \rightrightarrows f\) na zbiorze \(E\), który jest podzbiorem jakiejś przestrzeni metrycznej. Niech \(x\) będzie punktem skupienia zbioru \(E\) i niech
-	\[\lim_{t \to x} f(t) =  A_n \quad (n = 1, 2, 3, \ldots)\]
-Wtedy ciąg \(\{A_n\}\) jest zbieżny i 
-	\[lim_{t \to x} f(t) = lim_{n \to \infty} A_n.\]
+Niech $f_n \rightrightarrows f$ na zbiorze $E$, który jest podzbiorem jakiejś przestrzeni metrycznej. Niech $x$ będzie punktem skupienia zbioru $E$ i niech
+	\begin{equation*}
+		\lim_{t \to x} f(t) =  A_n \quad (n = 1, 2, 3, \ldots)
+	\end{equation*}]
+Wtedy ciąg $\{A_n\}$ jest zbieżny i 
+	\begin{equation*}
+		lim_{t \to x} f(t) = lim_{n \to \infty} A_n.
+	\end{equation*}]
 
 Inaczej mówiąc
-	\[\lim_{t \to x} \lim_{n \to \infty} f_n(t) = lim_{n \to \infty} \lim_{t \to x} f_n(t).\]
+	\begin{equation*}
+		\lim_{t \to x} \lim_{n \to \infty} f_n(t) = lim_{n \to \infty} \lim_{t \to x} f_n(t).
+	\end{equation*}
 
 DOWÓD.
-Niech dana będzie liczba \(\varepsilon > 0\). Ciąg \(\{f_n\}\) jest jednostajnie zbieżny, więc istnieje takie \(N\), że jeśli \(n \geq N, \. m \geq N, \. t \in E\), to zachodzi nierówność ( twierdzenie /ref{tw:zbJednCiagCouchyego}):
-	\[f_n(t) - f_m(t) \leq \varepsilon\] 
-Przechodząc z \(t\) do granicy, otrzymujemy 
-	\[\left| A_n - A_m \right| \leq \varepsilon \. dla \. n\geq N, m \geq N, \]
-Wynika stąd, że ciąg \(\{A_n\}\) jest ciagiem Couchy'ego, a zatem ma granicę. Oznaczmy tę granicę przez \(A\). Wtedy
-	\[\left| f(t) - A \right| \leq \left| f(t) - f_n(t) + f_n(t) - A_n + A_n -A \right| \leq
-	 \left|f(t) - f_n(t) \right| + \left|f_n(t) - A_n \right| + \left| A_n - A \right|.\]
-Ciąg \(\{f_n\}\) jest jednostajnie zbieżny, zatem możemy wybrać n tak, zeby dla każdego \(t \in E\) spełniona była nierówność
-	\[\left|f(t) - f_n(t)\right| \leq \frac{1}{3} \varepsilon\]
+Niech dana będzie liczba $\varepsilon > 0$. Ciąg $\{f_n\}$ jest jednostajnie zbieżny, więc istnieje takie $N$, że jeśli $n \geq N, \. m \geq N, \. t \in E$, to zachodzi nierówność ( twierdzenie /ref{tw:zbJednCiagCouchyego}):
+	\begin{equation*}
+		f_n(t) - f_m(t) \leq \varepsilon
+	\end{equation*} 
+Przechodząc z $t$ do granicy, otrzymujemy 
+	\begin{equation*}
+		\left| A_n - A_m \right| \leq \varepsilon \. dla \. n\geq N, m \geq N, 
+	\end{equation*}
+Wynika stąd, że ciąg $\{A_n\}$ jest ciagiem Couchy'ego, a zatem ma granicę. Oznaczmy tę granicę przez $A$. Wtedy
+	\begin{equation*}
+		\left| f(t) - A \right| \leq \left| f(t) - f_n(t) + f_n(t) - A_n + A_n -A \right| \leq
+	 	\left|f(t) - f_n(t) \right| + \left|f_n(t) - A_n \right| + \left| A_n - A \right|.
+	\end{equation*}
+Ciąg $\{f_n\}$ jest jednostajnie zbieżny, zatem możemy wybrać n tak, zeby dla każdego $t \in E$ spełniona była nierówność
+	\begin{equation*}
+		\left|f(t) - f_n(t)\right| \leq \frac{1}{3} \varepsilon
+	\end{equation*}
 i żeby 
-	\[\left| A_n - A \right| \leq \frac{1}{3} \varepsilon\]
-Dla tak wybranego \(n\) weźmy takie otoczenie punktu \(x\), że dla każdego \(t \in V \cap E, \> t \not= x\) (To przecięcie jest niepuste, bo x jest punktem skupienia zbioru \(E\)) zachodziło:
-	\[\left| f_n(t) - A_n \right| \leq \frac{1}{3} \varepsilon .\]
+	\begin{equation*}
+		\left| A_n - A \right| \leq \frac{1}{3} \varepsilon
+	\end{equation*}
+Dla tak wybranego $n$ weźmy takie otoczenie punktu $x$, że dla każdego $t \in V \cap E, \> t \not= x$ (To przecięcie jest niepuste, bo x jest punktem skupienia zbioru $E$) zachodziło:
+	\begin{equation*}
+		\left| f_n(t) - A_n \right| \leq \frac{1}{3} \varepsilon .
+	\end{equation*}
 Wykorzystując otrzymane nierówności mamy:
-	\[\left| f(t) - A \right| \leq \varepsilon ,\].
-Otrzymana nierówność jest prawdziwa dla \(t \in V, \, t \not= x.\) Ponieważ \(\lim_{n \to \infty} A_n = A\) mamy
-	\[\lim_{t \to x} f(t) = \lim_{n \to \infty A_n}.\]
+	\begin{equation*}
+		\left| f(t) - A \right| \leq \varepsilon 
+	\end{equation*}.
+Otrzymana nierówność jest prawdziwa dla $t \in V, \, t \not= x.$ Ponieważ $\lim_{n \to \infty} A_n = A$ mamy
+	\begin{equation*}
+		\lim_{t \to x} f(t) = \lim_{n \to \infty A_n}.
+	\end{equation*}
 
 Z powyższego twierdzenie wynika ważny wniosek:
 
 WNIOSEK \label{GranicaCiaguJednZb}
-Jeżeli \(\{f_n\}\) jest ciągiem funkcji ciągłych na zbiorze \(E\) i jeśli \(\f_n \rightrightarrows f\) na \(E\), to funkcja \(f\) jest ciągła na zbiorze \(E\).
+Jeżeli $\{f_n\}$ jest ciągiem funkcji ciągłych na zbiorze $E$ i jeśli $\f_n \rightrightarrows f$ na $E$, to funkcja $f$ jest ciągła na zbiorze $E$.
 
-Ciągłość funkcji będącej elementem ciągu oznacza, że \(\lim_{t \to x}f_n(t) = f_n(x)}\). Stosując twierdzenie \ref{tw:granicaJednZbCiaguCiagla} mamy, że
-	\[\lim_{t \to x} f(t) = \lim_{n \to \infty} f_n(x) = f(x)\]
-co oznacza ciągłoąś funkcji \(f(x).\)
+Ciągłość funkcji będącej elementem ciągu oznacza, że $\lim_{t \to x}f_n(t) = f_n(x)}$. Stosując twierdzenie \ref{tw:granicaJednZbCiaguCiagla} mamy, że
+	\begin{equation*}
+		\lim_{t \to x} f(t) = \lim_{n \to \infty} f_n(x) = f(x)
+	\end{equation*}
+co oznacza ciągłoąś funkcji $f(x).$
 
- 
 
